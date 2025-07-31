@@ -3,140 +3,121 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- 开启响应式布局，适配手机 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>单位信息页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单位信息展示</title>
   <style>
-    /* 通用样式重置，让不同浏览器表现更一致 */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box; 
-    }
-
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* 标题栏样式，红色背景、白色文字居中 */
-    .title-bar {
-      background-color: #f44336;
-      color: white;
-      text-align: center;
-      padding: 12px 0;
-      font-size: 18px;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
-      width: 90%;
-      max-width: 1200px; 
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden; 
+      width: 80%;
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
     }
 
-    .info-item {
-      display: flex;
-      flex-wrap: wrap; 
+    .title-bar {
+      background-color: #f06b6b;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-table tr {
       border-bottom: 1px solid #eee;
     }
 
-    .info-item:last-child {
-      border-bottom: none;
+    .info-table td {
+      padding: 10px;
+      vertical-align: top;
     }
 
-    .info-label {
-      width: 30%;
+    .info-table td:first-child {
+      width: 35%;
       background-color: #f9f9f9;
-      padding: 10px;
       text-align: right;
       color: #666;
     }
 
-    .info-value {
-      width: 70%;
-      padding: 10px;
-      word-break: break-word; 
-    }
-
-    /* 响应式适配，手机端让label和value堆叠 */
-    @media (max-width: 768px) {
-      .info-label,
-      .info-value {
-        width: 100%;
-        text-align: left; 
-      }
-      .info-label {
-        background-color: #f9f9f9;
-      }
+    .info-table td:last-child {
+      width: 65%;
     }
   </style>
 </head>
 
 <body>
-  <div class="title-bar">单位基本信息</div>
   <div class="container">
-    <div class="info-item">
-      <div class="info-label">单位名称：</div>
-      <div class="info-value">重庆通维勘测技术有限公司</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">资质等级：</div>
-      <div class="info-value">乙级</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">注册地址：</div>
-      <div class="info-value">重庆市沙坪坝区华宇广场11-20-1号 - 1</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">办公地址：</div>
-      <div class="info-value">重庆市沙坪坝区华宇广场11-20-1号 - 1</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">邮政编码：</div>
-      <div class="info-value">400052</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">法定代表人：</div>
-      <div class="info-value">曾定一</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">联系人：</div>
-      <div class="info-value">曾定一</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">联系电话：</div>
-      <div class="info-value">023 - 62505010</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">资质证号：</div>
-      <div class="info-value">乙测资字50500004</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">发证日期：</div>
-      <div class="info-value">2021/9/15</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">证书有效期：</div>
-      <div class="info-value">2026/9/14</div>
-    </div>
-    <div class="info-item">
-      <div class="info-label">单位业务范围：</div>
-      <div class="info-value">乙级：工程测量(不得从事二等及以上控制测量、国家建设重点工程的规划测量、单个建筑物10万平方米及以上的建筑工程测量、特大型水利水电工程测量、4千米及以上隧道工程测量)、海洋测绘(不得从事深度基准测量、海图编制；不得从事连片区域100平方千米及以上的海岸地形测量、水深测量、水文观测、海洋工程测量和扫海测量)、界线与不动产测绘(不得从事国界线测绘、规划许可证载单栋建筑10万平方米及以上的房产测绘)。***</div>
-    </div>
-  </div>
-
-  <div class="title-bar">年度报告情况</div>
-  <div class="container">
-    <div class="info-item">
-      <div class="info-label">最近五年的年度报告情况：</div>
-      <div class="info-value">暂无相关年度报告</div>
-    </div>
+    <div class="title-bar">单位基本信息</div>
+    <table class="info-table">
+      <tr>
+        <td>单位名称：</td>
+        <td>重庆通维勘测技术有限公司</td>
+      </tr>
+      <tr>
+        <td>资质等级：</td>
+        <td>乙级</td>
+      </tr>
+      <tr>
+        <td>注册地址：</td>
+        <td>重庆通维勘测技术有限公司 - 1</td>
+      </tr>
+      <tr>
+        <td>办公地址：</td>
+        <td>重庆市沙坪坝区华宇广场11-20-1号 - 1</td>
+      </tr>
+      <tr>
+        <td>邮政编码：</td>
+        <td>400052</td>
+      </tr>
+      <tr>
+        <td>法定代表人：</td>
+        <td>熊灵敏</td>
+      </tr>
+      <tr>
+        <td>联系人：</td>
+        <td>熊灵敏</td>
+      </tr>
+      <tr>
+        <td>联系电话：</td>
+        <td>023 - 62505010</td>
+      </tr>
+      <tr>
+        <td>资质证号：</td>
+        <td>乙测资字50500004</td>
+      </tr>
+      <tr>
+        <td>发证日期：</td>
+        <td>2021/9/15</td>
+      </tr>
+      <tr>
+        <td>证书有效期：</td>
+        <td>2026/9/14</td>
+      </tr>
+      <tr>
+        <td>单位业务范围：</td>
+        <td>乙级：工程测量(不得从事二等及以上控制测量、国家建设重点工程的规划测量、单个建筑物10万平方米及以上的建筑工程测量、特大型水利水电工程测量、4千米及以上隧道工程测量)、海洋测绘(不得从事深度基准测量、海图编制；不得从事连片区域100 平方千米及以上的海岸地形测量、水深测量、水文观测、海洋工程测量和扫海测量)、界线与不动产测绘(不得从事国界线测绘、规划许可证载单栋建筑10万平方米及以上的房产测绘)。***</td>
+      </tr>
+    </table>
+    <div class="title-bar">年度报告情况</div>
+    <table class="info-table">
+      <tr>
+        <td>最近五年的年度报告情况：</td>
+        <td>暂无相关年度报告</td>
+      </tr>
+    </table>
   </div>
 </body>
 
