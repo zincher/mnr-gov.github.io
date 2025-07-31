@@ -20,16 +20,19 @@
       font-size: 16px;
       line-height: 1.5;
       color: #333;
-      padding-bottom: 20px;
+      /* 移除可能导致偏移的底部内边距 */
+      padding-bottom: 0;
     }
     
     .container {
       width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
+      /* 移除最大宽度限制，避免小屏出现左右空白 */
+      max-width: none;
+      margin: 0;
       background-color: #fff;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      /* 移除阴影避免视觉上的偏移感 */
+      box-shadow: none;
     }
     
     .title-bar {
@@ -39,11 +42,16 @@
       font-size: 18px;
       font-weight: bold;
       text-align: center;
+      /* 确保标题栏左右无间隙 */
+      width: 100%;
+      margin: 0;
     }
     
     .info-table {
       width: 100%;
       border-collapse: collapse;
+      /* 确保表格占满宽度 */
+      table-layout: fixed;
     }
     
     .info-table tr {
@@ -61,11 +69,15 @@
       text-align: right;
       color: #666;
       font-weight: 500;
+      /* 左侧单元格右对齐更精确 */
+      padding-right: 18px;
     }
     
     .info-table td:last-child {
       width: 62%;
       word-break: break-word;
+      /* 右侧单元格左对齐更精确 */
+      padding-left: 18px;
     }
     
     /* 微信特有样式优化 */
@@ -81,10 +93,13 @@
       }
     }
     
-    /* 解决微信字体放大问题 */
+    /* 解决微信字体放大和布局偏移问题 */
     html {
       -webkit-text-size-adjust: 100% !important;
       text-size-adjust: 100% !important;
+      /* 确保根元素无偏移 */
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -103,11 +118,11 @@
       </tr>
       <tr>
         <td>注册地址：</td>
-        <td>重庆市沙坪坝区华宇广场11-20-1号  - 1</td>
+        <td>重庆市沙坪坝区华宇广场11-20-1号 - 1</td>
       </tr>
       <tr>
         <td>办公地址：</td>
-        <td>重庆市沙坪坝区华宇广场11-20-1号  - 1</td>
+        <td>重庆市沙坪坝区华宇广场11-20-1号 - 1</td>
       </tr>
       <tr>
         <td>邮政编码：</td>
