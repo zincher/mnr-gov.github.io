@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>单位信息展示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>单位基本信息</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
-
+    
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f5f5f5;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      padding-bottom: 20px;
+    }
+    
     .container {
-      width: 80%;
+      width: 100%;
       max-width: 600px;
-      margin: 50px auto;
+      margin: 0 auto;
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 4px;
       overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-
+    
     .title-bar {
       background-color: #f06b6b;
       color: #fff;
-      padding: 10px;
-      text-align: center;
+      padding: 12px 15px;
+      font-size: 18px;
       font-weight: bold;
+      text-align: center;
     }
-
+    
     .info-table {
       width: 100%;
       border-collapse: collapse;
     }
-
+    
     .info-table tr {
       border-bottom: 1px solid #eee;
     }
-
+    
     .info-table td {
-      padding: 10px;
+      padding: 12px 15px;
       vertical-align: top;
     }
-
+    
     .info-table td:first-child {
-      width: 35%;
+      width: 38%;
       background-color: #f9f9f9;
       text-align: right;
       color: #666;
+      font-weight: 500;
     }
-
+    
     .info-table td:last-child {
-      width: 65%;
+      width: 62%;
+      word-break: break-word;
+    }
+    
+    /* 微信特有样式优化 */
+    @media (max-width: 375px) {
+      .info-table td {
+        padding: 10px 12px;
+        font-size: 15px;
+      }
+      
+      .title-bar {
+        padding: 10px 12px;
+        font-size: 17px;
+      }
+    }
+    
+    /* 解决微信字体放大问题 */
+    html {
+      -webkit-text-size-adjust: 100% !important;
+      text-size-adjust: 100% !important;
     }
   </style>
 </head>
@@ -72,11 +103,11 @@
       </tr>
       <tr>
         <td>注册地址：</td>
-        <td>重庆通维勘测技术有限公司 - 1</td>
+        <td>重庆市沙坪坝区华宇广场11-20-1号  - 1</td>
       </tr>
       <tr>
         <td>办公地址：</td>
-        <td>重庆市沙坪坝区华宇广场11-20-1号 - 1</td>
+        <td>重庆市沙坪坝区华宇广场11-20-1号  - 1</td>
       </tr>
       <tr>
         <td>邮政编码：</td>
@@ -84,11 +115,11 @@
       </tr>
       <tr>
         <td>法定代表人：</td>
-        <td>熊灵敏</td>
+        <td>曾定一</td>
       </tr>
       <tr>
         <td>联系人：</td>
-        <td>熊灵敏</td>
+        <td>曾定一</td>
       </tr>
       <tr>
         <td>联系电话：</td>
@@ -122,3 +153,4 @@
 </body>
 
 </html>
+    
